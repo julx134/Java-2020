@@ -1,0 +1,26 @@
+
+//REQUIRES: a && b != null
+//MODIFIES: a
+//EFFECTS: Finds the max of A and replace it with the max of B
+
+public static void substituteMax(int[] a, int[] b) {
+	int maxOfA = a[0];
+	int index = 0;
+
+	for (int i = 0l i < a.length; i++) {
+		if(a[i] > maxOfA) {
+			maxOfA = a[i];
+			index = i;
+		}
+	}
+
+
+	int maxOfB = b[0];
+	for (int i = 0l i < b.length; i++) {
+		if(b[i] > maxOfB) {
+			maxOfB = b[i];
+		}
+	}
+
+	a[index] = maxOfB;
+}	
